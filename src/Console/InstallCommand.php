@@ -11,7 +11,7 @@ class InstallCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'admin:install';
+    protected $signature = 'admin:install {--migrationpath=database/migrations}';
 
     /**
      * The console command description.
@@ -46,7 +46,7 @@ class InstallCommand extends Command
      */
     public function initDatabase()
     {
-        $this->call('migrate');
+        $this->call('migrate', ['--path' => $this->option['migrationpath'] ?? config('admin.published_migrations_location')]);
 
         $userModel = config('admin.database.users_model');
 
