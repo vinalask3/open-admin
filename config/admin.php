@@ -67,6 +67,18 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Open-admin publishrd migrations location
+    |--------------------------------------------------------------------------
+    |
+    | If you have any reason to move the published migrations from the default laravel migrations
+    | folder, as may be necessary for some multitenant applications, indicate the new location
+    | here so that the admin:install command can run correctly.
+    |
+    */
+    'published_migrations_location' => 'database/migrations',
+
+    /*
+    |--------------------------------------------------------------------------
     | Open-admin install directory
     |--------------------------------------------------------------------------
     |
