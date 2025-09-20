@@ -414,6 +414,16 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Published Migration Path
+    |--------------------------------------------------------------------------
+    |
+    | This allow that the package migration be moved to a custom directory and run from there,
+    | The default laravel migration directory is used by default.
+    */
+    'published_migrations_path' => 'database/migrations',
+
+    /*
+    |--------------------------------------------------------------------------
     | Settings for extensions.
     |--------------------------------------------------------------------------
     |
@@ -424,4 +434,3 @@ return [
     'extensions' => [
 
     ],
-];
