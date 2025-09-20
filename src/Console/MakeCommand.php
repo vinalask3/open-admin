@@ -139,7 +139,7 @@ class MakeCommand extends GeneratorCommand
      */
     protected function modelExists()
     {
-        if (empty($this->modelName)) {
+        if (!empty($this->modelName)) {
             return true;
         }
 
